@@ -1,0 +1,162 @@
+2022-05-31 01:52:57.582 +05:30 [INF] AddStudent Request Recived ==> {"FirstName":"Karanbir","LastName":"Singh","Standard":1} 
+2022-05-31 01:53:12.554 +05:30 [INF] AddStudent Response Generated ==> dcd17f3e-c776-42a5-adab-b412cc61df29 
+2022-05-31 01:56:16.782 +05:30 [INF] UpdateStudent Request Recived ==> {"Id":"dcd17f3e-c776-42a5-adab-b412cc61df29","FirstName":"Karanbir","LastName":"Singh Ghai","Standard":2} 
+2022-05-31 01:56:18.491 +05:30 [INF] UpdateStudent Response Generated ==> dcd17f3e-c776-42a5-adab-b412cc61df29 
+2022-05-31 01:57:00.249 +05:30 [INF] UpdateStudent Request Recived ==> {"Id":"dcd17f3e-c776-42a5-adab-b412cc61df29","FirstName":"Karanbir","LastName":"Singh Ghai","Standard":2} 
+2022-05-31 01:59:12.948 +05:30 [INF] UpdateStudent Request Recived ==> {"Id":"dcd17f3e-c776-42a5-adab-b412cc61df29","FirstName":"Karanbir Singh","LastName":"Ghai","Standard":3} 
+2022-05-31 01:59:16.790 +05:30 [INF] UpdateStudent Response Generated ==> dcd17f3e-c776-42a5-adab-b412cc61df29 
+2022-05-31 02:13:01.654 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"dcd17f3e-c776-42a5-adab-b412cc61df29","Subject":1,"Marks":95} 
+2022-05-31 02:13:05.527 +05:30 [ERR] Exception Raised An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_StudentMarks_Students_StudentId". The conflict occurred in database "DemoAngularDotnetAppDB", table "dbo.Students", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:76d4d55a-342c-4c21-81f7-12e827a8ae89
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Demo.Db.Repository.Repository`1.SaveAsync() in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Db\Repository\Repository.cs:line 84
+   at Demo.Services.Implementation.StudentMarksService.AddStudentMarks(AddStudentMarksDto registerStudentMarksDto) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\Implementation\StudentMarksService.cs:line 32
+   at DEMOWebApi.Controllers.StudentController.AddStudentMarks(AddStudentMarksViewModel StudentMarksViewModel) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\DEMOWebApi\Controllers\StudentController.cs:line 205
+2022-05-31 02:13:20.416 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"dcd17f3e-c776-42a5-adab-b412cc61df29","Subject":1,"Marks":95} 
+2022-05-31 02:14:35.911 +05:30 [ERR] Exception Raised An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_StudentMarks_Students_StudentId". The conflict occurred in database "DemoAngularDotnetAppDB", table "dbo.Students", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:76d4d55a-342c-4c21-81f7-12e827a8ae89
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Demo.Db.Repository.Repository`1.SaveAsync() in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Db\Repository\Repository.cs:line 84
+   at Demo.Services.Implementation.StudentMarksService.AddStudentMarks(AddStudentMarksDto registerStudentMarksDto) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\Implementation\StudentMarksService.cs:line 32
+   at DEMOWebApi.Controllers.StudentController.AddStudentMarks(AddStudentMarksViewModel StudentMarksViewModel) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\DEMOWebApi\Controllers\StudentController.cs:line 205
+2022-05-31 02:14:44.618 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"dcd17f3e-c776-42a5-adab-b412cc61df29","Subject":1,"Marks":95} 
+2022-05-31 02:20:38.144 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"dcd17f3e-c776-42a5-adab-b412cc61df29","Subject":1,"Marks":99} 
+2022-05-31 02:21:19.431 +05:30 [ERR] Exception Raised A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Demo.Db.Repository.Repository`1.SaveAsync() in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Db\Repository\Repository.cs:line 84
+   at Demo.Services.Implementation.StudentMarksService.AddStudentMarks(AddStudentMarksDto registerStudentMarksDto) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\Implementation\StudentMarksService.cs:line 43
+   at DEMOWebApi.Controllers.StudentController.AddStudentMarks(AddStudentMarksViewModel StudentMarksViewModel) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\DEMOWebApi\Controllers\StudentController.cs:line 205
+2022-05-31 02:21:31.519 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"dcd17f3e-c776-42a5-adab-b412cc61df29","Subject":1,"Marks":99} 
+2022-05-31 12:36:33.439 +05:30 [INF] AddStudent Request Recived ==> {"FirstName":"Jai","LastName":"Singh","Standard":8} 
+2022-05-31 12:36:35.971 +05:30 [INF] AddStudent Response Generated ==> 79259ed5-30f5-4440-8f35-646591aac5ce 
+2022-05-31 12:37:08.136 +05:30 [INF] AddStudent Request Recived ==> {"FirstName":"Abhi","LastName":"Mahajan","Standard":10} 
+2022-05-31 12:37:08.149 +05:30 [INF] AddStudent Response Generated ==> 71480755-35e6-455c-a2c3-dd8f17e6a85c 
+2022-05-31 12:38:07.106 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"79259ed5-30f5-4440-8f35-646591aac5ce","Subject":1,"Marks":95} 
+2022-05-31 12:39:14.363 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"79259ed5-30f5-4440-8f35-646591aac5ce","Subject":2,"Marks":95} 
+2022-05-31 13:00:22.905 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"79259ed5-30f5-4440-8f35-646591aac5ce","Subject":5,"Marks":100} 
+2022-05-31 13:00:40.804 +05:30 [ERR] Exception Raised A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Demo.Db.Repository.Repository`1.SaveAsync() in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Db\Repository\Repository.cs:line 84
+   at Demo.Services.Implementation.StudentMarksService.AddStudentMarks(AddStudentMarksDto registerStudentMarksDto) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\Implementation\StudentMarksService.cs:line 43
+   at DEMOWebApi.Controllers.StudentController.AddStudentMarks(AddStudentMarksViewModel StudentMarksViewModel) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\DEMOWebApi\Controllers\StudentController.cs:line 205
+2022-05-31 13:07:07.066 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"79259ed5-30f5-4440-8f35-646591aac5ce","Subject":4,"Marks":100} 
+2022-05-31 13:11:56.760 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"79259ed5-30f5-4440-8f35-646591aac5ce","Subject":6,"Marks":99} 
+2022-05-31 13:11:58.670 +05:30 [INF] AddStudentMarks Response Generated ==> fad217c6-3528-4974-861e-a13d62956211 
+2022-05-31 13:12:23.040 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":10,"SearchFilter":{"Marks":0,"Subject":0,"Standard":0}} 
+2022-05-31 13:12:23.214 +05:30 [INF] GetMultipleStudentsRecords Response Generated ==> {"Records":null,"Count":5} 
+2022-05-31 13:12:47.690 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":10,"SearchFilter":{"Marks":0,"Subject":0,"Standard":0}} 
+2022-05-31 16:08:52.553 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":10,"SearchFilter":{"Marks":0,"Subject":0,"Standard":0}} 
+2022-05-31 16:15:27.825 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":10,"SearchFilter":{"Marks":0,"Subject":0,"Standard":0}} 
+2022-05-31 16:20:00.536 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"bbec6c3e-b93c-4bd4-84f3-246129fb2353","Subject":5,"Marks":100} 
+2022-05-31 16:20:54.539 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"79259ed5-30f5-4440-8f35-646591aac5ce","Subject":5,"Marks":100} 
+2022-05-31 16:21:44.462 +05:30 [ERR] Exception Raised An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_StudentMarks_Students_StudentId". The conflict occurred in database "DemoAngularDotnetAppDB", table "dbo.Students", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:3c3d02e7-1922-4ae1-b66d-d5bf18cf8d34
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Demo.Db.Repository.Repository`1.SaveAsync() in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Db\Repository\Repository.cs:line 84
+   at Demo.Services.Implementation.StudentMarksService.AddStudentMarks(AddStudentMarksDto registerStudentMarksDto) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\Implementation\StudentMarksService.cs:line 43
+   at DEMOWebApi.Controllers.StudentController.AddStudentMarks(AddStudentMarksViewModel StudentMarksViewModel) in C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\DEMOWebApi\Controllers\StudentController.cs:line 205
+2022-05-31 16:21:50.022 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"79259ed5-30f5-4440-8f35-646591aac5ce","Subject":5,"Marks":100} 
+2022-05-31 17:16:52.086 +05:30 [INF] AddStudent Request Recived ==> {"FirstName":"Jai","LastName":"Singh","Standard":8} 
+2022-05-31 17:16:53.386 +05:30 [INF] AddStudent Response Generated ==> be33232e-3c0a-4b68-8590-c52723c4c55e 
+2022-05-31 17:17:06.594 +05:30 [INF] AddStudent Request Recived ==> {"FirstName":"Abhi","LastName":"Mahajan","Standard":9} 
+2022-05-31 17:17:06.649 +05:30 [INF] AddStudent Response Generated ==> 7a7f3010-1da7-4ec2-bc05-4fa368611079 
+2022-05-31 17:17:23.039 +05:30 [INF] AddStudent Request Recived ==> {"FirstName":"Karanbir","LastName":"Singh","Standard":5} 
+2022-05-31 17:17:23.049 +05:30 [INF] AddStudent Response Generated ==> 1f13d681-792d-415e-978b-83b815e6ca4a 
+2022-05-31 17:18:00.367 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"1f13d681-792d-415e-978b-83b815e6ca4a","Subject":2,"Marks":88} 
+2022-05-31 17:18:00.954 +05:30 [INF] AddStudentMarks Response Generated ==> 97b37b56-b677-42e5-8fff-8aba31dca3a9 
+2022-05-31 17:18:14.991 +05:30 [INF] AddStudentMarks Request Recived ==> {"StudentId":"1f13d681-792d-415e-978b-83b815e6ca4a","Subject":3,"Marks":89} 
+2022-05-31 17:18:15.006 +05:30 [INF] AddStudentMarks Response Generated ==> 3ff91212-8d68-4a61-8f96-b3bdc8102a5f 
+2022-05-31 17:25:43.126 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":10,"SearchFilter":{"Marks":0,"Subject":0,"Standard":0}} 
+2022-05-31 17:34:43.731 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":10,"SearchFilter":{"Marks":0,"Subject":0,"Standard":0}} 
+2022-05-31 17:35:57.385 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":0,"PageSize":0,"SearchFilter":{"Marks":0,"Subject":1,"Standard":1}} 
+2022-05-31 17:49:15.084 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":0,"PageSize":0,"SearchFilter":{"Marks":0,"Subject":1,"Standard":1}} 
+2022-05-31 17:50:10.982 +05:30 [INF] GetMultipleStudentsRecords Response Generated ==> {"Records":[{"Student":{"Id":"7a7f3010-1da7-4ec2-bc05-4fa368611079","FirstName":"Abhi","LastName":"Mahajan","Standard":9},"Subject":0,"Marks":0},{"Student":{"Id":"1f13d681-792d-415e-978b-83b815e6ca4a","FirstName":"Karanbir","LastName":"Singh","Standard":5},"Subject":2,"Marks":88},{"Student":{"Id":"be33232e-3c0a-4b68-8590-c52723c4c55e","FirstName":"Jai","LastName":"Singh","Standard":8},"Subject":0,"Marks":0}],"Count":3} 
+2022-05-31 17:51:58.362 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":0,"SearchFilter":{"Marks":0,"Subject":1,"Standard":1}} 
+2022-05-31 17:52:06.302 +05:30 [INF] GetMultipleStudentsRecords Response Generated ==> {"Records":[{"Student":{"Id":"7a7f3010-1da7-4ec2-bc05-4fa368611079","FirstName":"Abhi","LastName":"Mahajan","Standard":9},"Subject":0,"Marks":0},{"Student":{"Id":"1f13d681-792d-415e-978b-83b815e6ca4a","FirstName":"Karanbir","LastName":"Singh","Standard":5},"Subject":2,"Marks":88},{"Student":{"Id":"be33232e-3c0a-4b68-8590-c52723c4c55e","FirstName":"Jai","LastName":"Singh","Standard":8},"Subject":0,"Marks":0}],"Count":3} 
+2022-05-31 17:59:02.747 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":100,"SearchFilter":{"MarksAbove":90,"Subject":0,"Standard":0}} 
+2022-05-31 17:59:39.908 +05:30 [INF] GetMultipleStudentsRecords Response Generated ==> {"Records":[],"Count":0} 
+2022-05-31 18:00:02.932 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":100,"SearchFilter":{"MarksAbove":89,"Subject":0,"Standard":0}} 
+2022-05-31 18:00:12.216 +05:30 [INF] GetMultipleStudentsRecords Response Generated ==> {"Records":[],"Count":0} 
+2022-05-31 18:00:23.285 +05:30 [INF] GetMultipleStudentsRecords Request Recived ==> {"PageNumber":1,"PageSize":100,"SearchFilter":{"MarksAbove":88,"Subject":0,"Standard":0}} 
+2022-05-31 18:00:31.847 +05:30 [INF] GetMultipleStudentsRecords Response Generated ==> {"Records":[{"Student":{"Id":"1f13d681-792d-415e-978b-83b815e6ca4a","FirstName":"Karanbir","LastName":"Singh","Standard":5},"Subject":2,"Marks":88}],"Count":1} 

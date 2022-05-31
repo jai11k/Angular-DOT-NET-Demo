@@ -1,0 +1,33 @@
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Services.deps.json
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Services.dll
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Services.pdb
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.csproj.AssemblyReference.cache
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.AssemblyInfoInputs.cache
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.AssemblyInfo.cs
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.csproj.CoreCompileInputs.cache
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.dll
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\obj\Debug\net6.0\refint\Demo.Services.dll
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.pdb
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Services\obj\Debug\net6.0\ref\Demo.Services.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Services.deps.json
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Services.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Services.pdb
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.csproj.AssemblyReference.cache
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.AssemblyInfoInputs.cache
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.AssemblyInfo.cs
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.csproj.CoreCompileInputs.cache
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\refint\Demo.Services.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.pdb
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\ref\Demo.Services.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Common.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Dtos.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Dtos.pdb
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Common.pdb
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\obj\Debug\net6.0\Demo.Services.csproj.CopyComplete
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Db.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Models.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Db.pdb
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Services\bin\Debug\net6.0\Demo.Models.pdb

@@ -1,0 +1,30 @@
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Models.deps.json
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Models.dll
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Models.pdb
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Common.dll
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Common.pdb
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.csproj.AssemblyReference.cache
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.AssemblyInfoInputs.cache
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.AssemblyInfo.cs
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.csproj.CoreCompileInputs.cache
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.csproj.CopyComplete
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.dll
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\refint\Demo.Models.dll
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.pdb
+C:\Users\91842\source\repos\DEMOWebApi\Demo.Models\obj\Debug\net6.0\ref\Demo.Models.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Models.deps.json
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Models.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Models.pdb
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Common.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\bin\Debug\net6.0\Demo.Common.pdb
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.csproj.AssemblyReference.cache
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.AssemblyInfoInputs.cache
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.AssemblyInfo.cs
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.csproj.CoreCompileInputs.cache
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.csproj.CopyComplete
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\refint\Demo.Models.dll
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\Demo.Models.pdb
+C:\Users\91842\source\repos\Angular DOT NET Demo\DEMOWebApi\Demo.Models\obj\Debug\net6.0\ref\Demo.Models.dll
