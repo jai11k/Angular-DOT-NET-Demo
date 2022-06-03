@@ -69,7 +69,43 @@ namespace DEMOWebApi.Controllers
 
         }
 
-        
+
+        [HttpPost]
+        public async Task<Result<string>> AddStudentAndMarks(AddStudentAndMarksViewModel studentAndMarksViewModel)
+        {
+            try
+            {
+
+                _logger.LogInformation($"AddStudentAndMarks Request Recived ==> {JsonConvert.SerializeObject(studentAndMarksViewModel)} ");
+                var StudentAndMarksDto = _mapper.Map<AddStudentAndMarksDto>(studentAndMarksViewModel);
+                var result = await _StudentService.AddStudentAndMarks(StudentAndMarksDto);
+                _logger.LogInformation($"AddStudentAndMarks Response Generated ==> {result} ");
+                return new Result<string>
+                {
+                    Output = Helper.RecordSaved,
+                    EntityId = result,
+                    Status = ResponseStatus.Ok
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Exception Raised {ex.Message}");
+                return new Result<string>
+                {
+                    Errors = new List<Error>()
+                    {
+                        new Error()
+                        {
+                            ErrorMessage = ex.Message
+                        }
+                    },
+                    Status = ResponseStatus.Exception
+                };
+            }
+
+        }
+
+
         [HttpPost]
         public async Task<Result<string>> UpdateStudent(EditStudentViewModel editStudentViewModel)
         {

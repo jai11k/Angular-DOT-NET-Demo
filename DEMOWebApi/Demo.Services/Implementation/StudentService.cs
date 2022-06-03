@@ -35,6 +35,19 @@ namespace Demo.Services.Implementation
             return student.Id;
         }
 
+        public async Task<Guid> AddStudentAndMarks(AddStudentAndMarksDto addStudentAndMarksDto)
+        {
+            var student = _mapper.Map<Student>(addStudentAndMarksDto.Student);
+            await _studentRepository.InsertAsync(student);
+            await _studentRepository.SaveAsync();
+
+            var studentMarks = _mapper.Map<StudentMarks>(addStudentAndMarksDto);
+            studentMarks.StudentId = student.Id;
+            await _studentMarksRepository.InsertAsync(studentMarks);
+            await _studentMarksRepository.SaveAsync();
+            return student.Id;
+        }
+
         public async Task<Guid> DeleteStudent(DeleteEntityDto deleteEntityDto)
         {
             var existingStudent = await _studentRepository.GetByIdAsync(deleteEntityDto.Id);

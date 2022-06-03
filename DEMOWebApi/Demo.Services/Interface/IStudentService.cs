@@ -16,6 +16,8 @@ namespace Demo.Services.Interface
         Task<Guid> EditStudent(EditStudentDto editStudentDto);
         Task<Guid> DeleteStudent(DeleteEntityDto deleteEntityDto);
 
+        Task<Guid> AddStudentAndMarks(AddStudentAndMarksDto addStudentAndMarksDto);
+
         Task<MultipleRecordsAndCount<IEnumerable<ReturnStudentMarksDto>>> GetMultipleStudentRecords(GetFilteredRecordsDto getStudenttRecordsDto);
 
     }
