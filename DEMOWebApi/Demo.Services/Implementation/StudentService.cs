@@ -74,6 +74,33 @@ namespace Demo.Services.Implementation
             return Guid.Empty;
         }
 
+        public async Task<MultipleRecordsAndCount<IEnumerable<ReturnStudentAndMarksDto>>> GetAllStudentAndTheirMarks()
+        {
+            var returnStudentAndMarksDtoList = new List<ReturnStudentAndMarksDto>();
+
+            var students = await _studentRepository.NonDeletedEntity.ToListAsync();
+
+            _mapper.Map(students, returnStudentAndMarksDtoList);
+
+            var studentsMarks = await _studentMarksRepository.NonDeletedEntity
+           .ToListAsync();
+
+            foreach (var returnStudentAndMarksDto in returnStudentAndMarksDtoList)
+            {
+                var studentMarksModel = studentsMarks.Where(x => x.StudentId.Equals(returnStudentAndMarksDto.StudentId)).FirstOrDefault();
+                if (studentMarksModel != null)
+                {
+                    _mapper.Map(studentMarksModel, returnStudentAndMarksDto);
+                }
+            }
+
+            return new MultipleRecordsAndCount<IEnumerable<ReturnStudentAndMarksDto>>
+            {
+                Count = returnStudentAndMarksDtoList.Count(),
+                Records = returnStudentAndMarksDtoList
+            };
+        }
+
         public async Task<MultipleRecordsAndCount<IEnumerable<ReturnStudentMarksDto>>> GetMultipleStudentRecords(GetFilteredRecordsDto getStudenttRecordsDto)
         {
             var returnStudentMarksDtoList = new List<ReturnStudentMarksDto>();

@@ -229,6 +229,55 @@ namespace DEMOWebApi.Controllers
         }
 
 
+        [HttpGet]
+        public async Task<ResultMultipleRecords<IEnumerable<ReturnStudentAndMarksViewModel>>> GetAllStudentsAndTheirMarks()
+        {
+            try
+            {
+                _logger.LogInformation($"GetAllStudentsAndTheirMarks Request Recived");
+                var result = await _StudentService.GetAllStudentAndTheirMarks();
+                _logger.LogInformation($"GetAllStudentsAndTheirMarks Response Generated ==> {JsonConvert.SerializeObject(result)} ");
+
+                if (result.Count == 0 || result == null)
+                {
+                    return new ResultMultipleRecords<IEnumerable<ReturnStudentAndMarksViewModel>>
+                    {
+                        Errors = new List<Error>()
+                            {
+                                new Error()
+                                {
+                                    ErrorMessage = Helper.NoRecordsFound
+                                }
+                            },
+
+                        Status = ResponseStatus.Invalid
+                    };
+                }
+
+                return new ResultMultipleRecords<IEnumerable<ReturnStudentAndMarksViewModel>>
+                {
+                    Output = _mapper.Map<IEnumerable<ReturnStudentAndMarksViewModel>>(result.Records),
+                    Status = ResponseStatus.Ok
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Exception Raised {ex.Message}");
+                return new ResultMultipleRecords<IEnumerable<ReturnStudentAndMarksViewModel>>
+                {
+                    Errors = new List<Error>()
+                    {
+                        new Error()
+                        {
+                            ErrorMessage = ex.Message
+                        }
+                    },
+                    Status = ResponseStatus.Exception
+                };
+            }
+
+        }
+
 
 
         [HttpPost]

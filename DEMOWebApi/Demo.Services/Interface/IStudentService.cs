@@ -18,6 +18,7 @@ namespace Demo.Services.Interface
 
         Task<Guid> AddStudentAndMarks(AddStudentAndMarksDto addStudentAndMarksDto);
 
+        Task<MultipleRecordsAndCount<IEnumerable<ReturnStudentAndMarksDto>>> GetAllStudentAndTheirMarks();
         Task<MultipleRecordsAndCount<IEnumerable<ReturnStudentMarksDto>>> GetMultipleStudentRecords(GetFilteredRecordsDto getStudenttRecordsDto);
 
     }

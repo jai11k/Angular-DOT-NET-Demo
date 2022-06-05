@@ -45,6 +45,10 @@ namespace DEMOWebApi.MapperProfile
             CreateMap<AddStudentAndMarksDto, StudentMarks>();
             CreateMap<AddStudentAndMarksViewModel, AddStudentDto>();
 
+            CreateMap<ReturnStudentAndMarksDto, ReturnStudentAndMarksViewModel>();
+            CreateMap<Student, ReturnStudentAndMarksDto>()
+                .ForMember(dest => dest.StudentId, opt => opt.MapFrom(src => src.Id)); ;
+            CreateMap<StudentMarks, ReturnStudentAndMarksDto>();
             
 
 
