@@ -78,6 +78,7 @@ namespace DEMOWebApi.Controllers
 
                 _logger.LogInformation($"AddStudentAndMarks Request Recived ==> {JsonConvert.SerializeObject(studentAndMarksViewModel)} ");
                 var StudentAndMarksDto = _mapper.Map<AddStudentAndMarksDto>(studentAndMarksViewModel);
+                StudentAndMarksDto.Student = _mapper.Map<AddStudentDto>(studentAndMarksViewModel);
                 var result = await _StudentService.AddStudentAndMarks(StudentAndMarksDto);
                 _logger.LogInformation($"AddStudentAndMarks Response Generated ==> {result} ");
                 return new Result<string>

@@ -16,6 +16,7 @@ namespace Demo.Common
         History=6,
         Geography=7,
         Evs=8,
-        PhysicalEducation=9
+        PhysicalEducation=9,
+        Art=10
     }
 }

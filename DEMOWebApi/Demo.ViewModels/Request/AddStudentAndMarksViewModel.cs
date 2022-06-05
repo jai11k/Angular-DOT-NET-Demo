@@ -9,7 +9,9 @@ namespace Demo.ViewModels.Request
 {
     public class AddStudentAndMarksViewModel
     {
-        public AddStudentViewModel Student { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public Standard Standard { get; set; }
         public Subject Subject { get; set; }
         public int Marks { get; set; }
     }

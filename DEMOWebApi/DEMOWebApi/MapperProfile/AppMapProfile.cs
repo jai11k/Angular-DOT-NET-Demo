@@ -43,8 +43,9 @@ namespace DEMOWebApi.MapperProfile
             CreateMap<Student, EditStudentDto>();
             CreateMap<AddStudentAndMarksViewModel, AddStudentAndMarksDto>();
             CreateMap<AddStudentAndMarksDto, StudentMarks>();
-            
+            CreateMap<AddStudentAndMarksViewModel, AddStudentDto>();
 
+            
 
 
 

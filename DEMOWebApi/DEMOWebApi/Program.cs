@@ -21,7 +21,7 @@ builder.Host.UseLamar();
 //});
 
 // Add services to the container.
-
+builder.Services.AddCors();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
@@ -31,7 +31,16 @@ builder.Services.AddLamar(new ApplicationRegistry());
 builder.Services.AddDbContext<AppDbContext>(
     o => o.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 builder.Services.AddAutoMapper(typeof(AppMapProfile));
+
+
 var app = builder.Build();
+
+app.UseCors(options=>
+    options
+        //.AllowAnyOrigin()
+        .WithOrigins("http://localhost:4200")
+        .AllowAnyMethod()
+        .AllowAnyHeader());
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
